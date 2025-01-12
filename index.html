@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网易特殊模型转换器</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+  <script type="module" crossorigin src="./assets/main-lLxEk6IE.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-a1ukCZq_.css">
+</head>
+<body>
+    <div class="container">
+        <h1>网易特殊模型转换器</h1>
+        
+        <div class="tabs">
+            <button class="tab active" data-tab="single">单文件转换</button>
+            <button class="tab" data-tab="folder">文件夹转换</button>
+        </div>
+
+        <div class="tab-content active" id="single-tab">
+            <div class="drop-zone" id="dropZone">
+                <p>拖放 JSON 文件到这里，或点击选择文件</p>
+                <small>支持单个或多个文件</small>
+                <input type="file" id="fileInput" multiple accept=".json" style="display: none;">
+            </div>
+        </div>
+
+        <div class="tab-content" id="folder-tab">
+            <div class="drop-zone" id="folderDropZone">
+                <p>拖放文件夹到这里，或点击选择文件夹</p>
+                <small>支持文件夹批量转换</small>
+                <input type="file" id="folderInput" webkitdirectory directory multiple style="display: none;">
+            </div>
+        </div>
+
+        <div id="fileList"></div>
+        <button class="download-zip" id="downloadZip" disabled>打包下载所有转换文件</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+</body>
+</html>
